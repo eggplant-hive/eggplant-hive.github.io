@@ -7,38 +7,72 @@
 #
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: nasu+egg-glass@eggplant.org.uk
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 
+title: noteで記録した日常と写真と技術
+email: nasu+egg-glass@eggplant.org.uk
+author: "えっぐらす"
+description: |
+  <div>
+    <h2>ブログ全体の説明</h2>
+    <p>このブログ<code>note</code>は、旅行、写真、日常生活、技術など、多岐にわたるテーマを扱っています。</p>
+    <ul>
+      <li><strong>旅行</strong>: 北海道、宮城県、静岡県への旅行記や、散歩中に見つけた風景写真などを掲載しています。</li>
+      <li><strong>写真</strong>: 雪景色、街並み、高層ビルからの景色、花、動物など、様々な被写体を捉えた写真と撮影の裏話を紹介しています。著者は高所恐怖症ですが、恐怖心を克服して撮影した写真もあります。</li>
+      <li><strong>日常生活</strong>: 日常の出来事、感じたこと、考えたことなどを綴っています。</li>
+      <li><strong>技術</strong>: ChatGPTとPlantUMLを用いたマインドマップ作成術、Notionの活用方法、Gmailの整理術、note APIの使い方など、技術的な内容を図やコードを交えて解説しています。</li>
+    </ul>
+    <h2>ブログの特徴</h2>
+    <ul>
+      <li><strong>幅広いテーマ</strong>: 多様なテーマの記事を掲載しており、読者の興味関心を引く内容となっています。</li>
+      <li><strong>個性的な視点</strong>: 著者の独自の視点で書かれた文章は、読者に新鮮な発見や感動を与えます。</li>
+      <li><strong>分かりやすい解説</strong>: 技術的な内容も、初心者にも理解しやすいように丁寧に解説されています。</li>
+      <li><strong>写真の魅力</strong>: 美しい写真の数々は、読者の心を和ませ、旅情をかき立てます。</li>
+    </ul>
+    <h2>ブログから伝わること</h2>
+    <p>著者の真摯な姿勢、好奇心の強さ、読者への感謝の気持ちが伝わってきます。 by NotebookLM </p>
+    <p>noteの詳細は<a href="http://https://note.com/ego_station/">こちら</a></p>
+  </div>
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username: jekyll
-
+twitter_username: egg_glass
+github_username: eggplant-hive
+instagram_username: egg.glass
+show_excerpts: true
 # Build settings
-markdown: kramdown
 theme: minima
+minima:
+  date_format: "%Y年%m月%d日"
 plugins:
   - jekyll-feed
   - jekyll-sitemap
 # Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
 exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
   - Gemfile
   - Gemfile.lock
-  - node_modules
+  - node_modules/
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - README.md
+  - note_backup

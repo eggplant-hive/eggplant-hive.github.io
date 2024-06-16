@@ -1,10 +1,10 @@
 version: '3.8'
 
 services:
-  jekyll:
+  app:
     build: .
     ports:
       - "4000:4000"
     volumes:
-      - .:/srv/jekyll
+      - ./docs:/srv/jekyll/docs
     command: jekyll serve --host 0.0.0.0 --watch --force_polling

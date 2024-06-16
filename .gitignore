@@ -6,6 +6,9 @@ _site
 .bundle/
 vendor/
 
+docs/_posts_*
+docs/note_backup/
+
 # オペレーティングシステムによって生成されるファイル
 .DS_Store
 Thumbs.db

@@ -1,11 +1,5 @@
 _site
-.sass-cache/
+.sass-cache
+.jekyll-cache
 .jekyll-metadata
-.jekyll-cache/
-.jekyll-metadata
-.bundle/
-vendor/
-
-# オペレーティングシステムによって生成されるファイル
-.DS_Store
-Thumbs.db
+vendor
